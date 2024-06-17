@@ -1,0 +1,27 @@
+{
+  "name": "ethereum-2fa-auth",
+  "version": "1.0.0",
+  "description": "Blockchain-Based Two-Factor Authentcaton",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sally-Builds/ethereum-2fa-auth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sally-Builds/ethereum-2fa-auth/issues"
+  },
+  "homepage": "https://github.com/Sally-Builds/ethereum-2fa-auth#readme",
+  "dependencies": {
+    "base32.js": "^0.1.0",
+    "ethers": "^5.7.2",
+    "express": "^4.19.2",
+    "web3": "^4.9.0"
+  }
+}
