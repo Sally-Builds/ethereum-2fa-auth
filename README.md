@@ -1,7 +1,3 @@
-Certainly! Here's the markdown representation of the documentation:
-
-markdown
-
 # TwoFactorAuth Smart Contract Documentation
 
 ## Overview

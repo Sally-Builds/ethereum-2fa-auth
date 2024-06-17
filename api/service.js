@@ -4,7 +4,7 @@ const path = require("path");
 
 const provider = new ethers.providers.JsonRpcProvider("http://127.0.0.1:7545");
 const private_key =
-  "0x9c33588c18d9e8bf2124cf0c4a97467591cb61e2fd0ba28a60bab6984b8aee57";
+  "0x1beb24396c7bc2f6b8def9a45fca87069a6158264f8f4248b7962d5a47a6c7a8";
 const signer = new ethers.Wallet(private_key, provider);
 
 const getContract = async () => {
@@ -43,7 +43,8 @@ async function registerUser(username, otp_seed) {
   try {
     const contract = await getContract();
     const tx = await contract.registerUser(username, otp_seed, {
-      gasLimit: ethers.utils.parseUnits("100000", "wei"), // Setting gas limit to 100000
+      from: signer.address,
+      gasLimit: 5000000,
     });
     const receipt = await tx.wait();
     return receipt.transactionHash;
